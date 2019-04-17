@@ -13,6 +13,9 @@ import fr.com.leboncoin.ts.photos.PhotosViewModel
 import fr.com.leboncoin.ts.data.Photo
 import fr.com.leboncoin.ts.databinding.AlbumFragmentBinding
 import org.koin.android.viewmodel.ext.android.viewModel
+import android.support.v7.widget.GridLayoutManager
+
+
 
 
 class AlbumFragment : Fragment() {
@@ -34,7 +37,7 @@ class AlbumFragment : Fragment() {
         val binding : AlbumFragmentBinding = AlbumFragmentBinding.inflate(inflater, container, false)
         binding.viewModel = vm
         binding.recyclerView.adapter = PhotosAdapter(emptyList())
-        binding.recyclerView.layoutManager = LinearLayoutManager(activity)
+        binding.recyclerView.layoutManager = GridLayoutManager(activity, 2)
 
         val observer =  object : Observer<MutableList<Photo>> {
             override fun onChanged(t: MutableList<Photo>?) {
