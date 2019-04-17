@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LeBoncoin-test</string>
+    <string name="album_title">Big title</string>
+
+    <string name="photo_empty">Nothing to show here</string>
+    <string name="photo_failed">Error !!! </string>
+</resources>
